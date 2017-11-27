@@ -21,10 +21,10 @@ Route::get('/quotes', [
     'uses' => 'QuoteController@getQuotes'
 ]);
 
-Route::put('/quote{id}', [
+Route::put('/quote/{id}', [
     'uses' => 'QuoteController@putQuote'
 ]);
 
-Route::delete('/quote{id}', [
+Route::delete('/quote/{id}', [
     'uses' => 'QuoteController@deleteQuote'
 ]);
