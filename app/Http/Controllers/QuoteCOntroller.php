@@ -3,11 +3,17 @@ namespace App\Http\Controllers;
 
 use App\Quote;
 use Illuminate\Http\Request;
+use JWTAuth;
 
 class QuoteCOntroller extends Controller {
 
     public function postQuote(Request $request)
     {
+        if (!$user = JWTAuth::parseToken()->authenticate()) {
+            return response()->json([
+                'message' => 'User not found!'
+            ], 404);
+        }
         $quote = new Quote();
         $quote->content = $request->input('content');
         $quote->save();
