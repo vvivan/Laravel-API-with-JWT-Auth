@@ -1,5 +1,7 @@
 # Laravel API with JWT Auth
 
+![laravel-jwt-auth](./img-readme/laravel-jwt.png)
+
 Basic Laravel API with integrated Sean [Tymon JWT-Auth Middleware](https://github.com/tymondesigns/jwt-auth).
 
 The application integrates following API endpoints:
