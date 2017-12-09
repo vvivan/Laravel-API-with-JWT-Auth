@@ -22,42 +22,47 @@ Application stores user details on signup and returns the reponse containing JWT
 ### Token invalid
 ![token](./img-readme/token-invalid.png)
 
+### Getting All Notes
+![token](./img-readme/quotes.png)
+
 ## Routes - API Endpoints
 
 ### Signup Users
-> *POST Request*
+*POST Request*
 ```php
 {your-host-root}/api/user
 ```
 
 ### Signin Users
-> *POST Request*
+*POST Request*
 ```php
 {your-host-root}/api/user/signin
 ```
 
 ### Get All Notes (Quotes)
-> *GET Request*
+*GET Request*
 ```php
 {your-host-root}/api/quotes
 ```
-
+> *The route is guarded with JWT*
 
 ### Store the Note (Quote)
-> *POST Request*
+*POST Request*
 ```php
 {your-host-root}/api/quote
 ```
-
+> *The route is guarded with JWT*
 
 ### Edit the Note (Quote)
-> *PUT Request*
+*PUT Request*
 ```php
 {your-host-root}/api/quote/{id}
 ```
+> *The route is guarded with JWT*
 
 ### Delete the Note (Quote)
-> *DELETE Request*
+*DELETE Request*
 ```php
 {your-host-root}/api/quote/{id}
 ```
+> *The route is guarded with JWT*
