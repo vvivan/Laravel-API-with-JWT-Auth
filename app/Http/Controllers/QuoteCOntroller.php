@@ -19,13 +19,12 @@ class QuoteCOntroller extends Controller {
 
     public function getQuotes()
     {
-        $user = JWTAuth::parseToken()->toUser();
         $quotes = Quote::all();
         $response = [
             'quotes' => $quotes
         ];
 
-        return response()->json([$response, 'user' => $user], 200);
+        return response()->json([$response], 200);
     }
 
     public function putQuote(Request $request, $id)
